@@ -1,0 +1,6 @@
+positive	I love this product! It's amazing.
+positive	This is fantastic. I really like it.
+negative	This is the worst experience I've ever had.
+negative	I hate this product. It's terrible.
+neutral	The product is okay, nothing special.
+neutral	It's average. Not bad, not great.
