@@ -22,7 +22,7 @@ shortnotes.razzi.my
 [2] Update POM File
 
 Replace with the following codes:
-
+```
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -53,6 +53,7 @@ Replace with the following codes:
         </dependency>
     </dependencies>
 </project>
+```
 Code explanation:
 [2.1] Build properties:
 maven.compiler.source: Specifies the Java version for source code compatibility (Java 11 in this case).
@@ -60,18 +61,20 @@ maven.compiler.target: Specifies the target JVM version for the compiled bytecod
 These properties ensure your project uses Java 11 for both source code and compiled output.
 
 [2.2] Apache OpenNLP Dependency:
+```
 <dependency>
     <groupId>org.apache.opennlp</groupId>
     <artifactId>opennlp-tools</artifactId>
     <version>2.0.0</version>
 </dependency>
+```
 groupId: Identifies Apache OpenNLP as the source of the library.
 artifactId: Refers to the specific OpenNLP module (opennlp-tools).
 version: Specifies the version to use (2.0.0).
 [3] Edit main file
 [3.1] Simple Tokenizer
 Replace the content of Main.Java file with the following codes:
-
+```
 import opennlp.tools.tokenize.SimpleTokenizer;
 
 public class Main {
@@ -92,7 +95,7 @@ public class Main {
         }
     }
 }
-
+```
 Click the Run button.
 
 
@@ -101,11 +104,11 @@ Output:
 
 [3.2] Sentence Detection
 Download English model into folder /model:
-
+```
 wget -P model https://dlcdn.apache.org/opennlp/models/ud-models-1.2/opennlp-en-ud-ewt-sentence-1.2-2.5.0.bin
-
+```
 Replace the content of Main.Java file with the following codes:
-
+```
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.sentdetect.SentenceModel;
 
@@ -148,7 +151,7 @@ public class Main {
         }
     }
 }
-
+```
 Click the Run button.
 
 
@@ -157,7 +160,7 @@ Output:
 
 [3.3] Text categorization
 Create a sample of annotated text file in model/training-data.txt:
-
+```
 positive I love this product! It's amazing.
 positive This is fantastic. I really like it.
 negative This is the worst experience I've ever had.
@@ -230,7 +233,7 @@ public class Main {
         System.out.println();
     }
 }
-
+```
 Click the Run button.
 
 
